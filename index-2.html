@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LÜKS-VIN — VIN Analyzer</title>
+<style>
+:root{--bg:#07090d;--card:#10141b;--card2:#151b24;--text:#eef3f8;--muted:#9aa6b2;--line:#26303b;--accent:#d7b46a;--ok:#55d18a;--warn:#f0bd5b;--bad:#ff6f72}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#17202c 0,#07090d 42%);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1120px;margin:auto;padding:22px 14px 60px}.hero{padding:22px 0 18px}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.14em;font-size:12px}.hero h1{font-size:clamp(30px,7vw,52px);margin:7px 0}.hero p{color:var(--muted);max-width:760px;margin:0}
+.panel,.card{background:linear-gradient(180deg,rgba(21,27,36,.96),rgba(13,17,23,.96));border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px #0005}.panel{padding:16px}.search{display:flex;gap:10px;flex-wrap:wrap}.search input{flex:1;min-width:220px;background:#080b10;border:1px solid #35414e;color:white;border-radius:12px;padding:15px;font:700 16px monospace;text-transform:uppercase}.btn{border:0;border-radius:12px;padding:14px 18px;background:var(--accent);color:#15110a;font-weight:900;cursor:pointer}.btn.secondary{background:#252e39;color:white}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.chip{border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}.card{padding:16px}.wide{grid-column:1/-1}.title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}.title h2,.title h3{margin:0;font-size:18px}.muted{color:var(--muted)}.big{font-size:27px;font-weight:900}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.fact{background:#0a0e14;border:1px solid #202832;border-radius:11px;padding:10px}.fact b{display:block;color:#fff}.fact span{color:var(--muted);font-size:12px}.score{font-size:48px;font-weight:950}.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}.bar{height:9px;background:#242b33;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent);width:0}.table{width:100%;border-collapse:collapse}.table td,.table th{padding:9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.table th{color:var(--muted);font-size:12px}.notice{padding:11px 13px;border-radius:12px;background:#0b1016;border:1px solid var(--line);color:var(--muted);margin-top:10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.hidden{display:none}pre{white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto;background:#070a0e;border:1px solid var(--line);padding:12px;border-radius:12px;color:#cbd5df;font-size:12px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}.facts{grid-template-columns:1fr}.search .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div class="eyebrow">LÜKS-VIN / VEHICLE INTELLIGENCE</div>
+<h1>VIN'i çöz. Aracı anla.</h1>
+<p>Canlı VIN kaynakları + Avrupa/Türkiye odaklı yerel teknik katalog + şeffaf veri kaynağı gösterimi.</p>
+</section>
+
+<section class="panel">
+<div class="search">
+<input id="vin" maxlength="17" placeholder="17 karakter VIN gir..." autocomplete="off">
+<button class="btn" id="go">VIN ANALİZ ET</button>
+</div>
+<div class="chips">
+<span class="chip">🟢 Canlı API</span><span class="chip">🔵 JSON katalog</span><span class="chip">⚪ Veri yoksa açıkça söylenir</span>
+</div>
+<div class="actions" style="margin-top:10px">
+<button class="btn secondary" id="sample">Örnek VIN</button>
+<button class="btn secondary" id="clear">Temizle</button>
+</div>
+<div id="status" class="notice">Hazır. VIN girip analiz et.</div>
+</section>
+
+<div id="results" class="grid hidden">
+<section class="card wide">
+<div class="title"><h2 id="vehicleName">Araç</h2><span class="chip" id="confidence">—</span></div>
+<div id="sourceChips" class="chips"></div>
+<div class="facts" id="identity"></div>
+</section>
+
+<section class="card">
+<div class="title"><h3>Teknik Özellikler</h3></div>
+<div class="facts" id="tech"></div>
+<div id="catalogBox" class="notice hidden"></div>
+</section>
+
+<section class="card">
+<div class="title"><h3>VIN Skoru</h3><span class="muted">0–100</span></div>
+<div class="score" id="score">—</div>
+<div class="bar"><i id="scorebar"></i></div>
+<p class="muted" id="scoreText"></p>
+</section>
+
+<section class="card">
+<div class="title"><h3>Türkiye / ÖTV Simülasyonu</h3></div>
+<div class="facts">
+<div class="fact"><span>Matrah (TL)</span><input id="matrah" type="number" min="0" placeholder="örn. 1000000" style="width:100%;margin-top:5px;background:#080b10;color:white;border:1px solid #35414e;border-radius:8px;padding:9px"></div>
+<div class="fact"><span>ÖTV oranı</span><select id="otv" style="width:100%;margin-top:5px;background:#080b10;color:white;border:1px solid #35414e;border-radius:8px;padding:9px"><option value="0.25">%25</option><option value="0.4">%40</option><option value="0.5">%50</option><option value="0.6">%60</option><option value="0.7">%70</option><option value="0.8" selected>%80</option><option value="1">%100</option><option value="1.5">%150</option></select></div>
+</div>
+<div class="notice" id="taxOut">Matrah girildiğinde simülasyon burada görünür.</div>
+<p class="muted" style="font-size:12px">Bu bölüm yalnızca hesaplama simülasyonudur; güncel mevzuat/istisna/araç sınıfı kontrolü yerine geçmez.</p>
+</section>
+
+<section class="card">
+<div class="title"><h3>Karar Motoru</h3></div>
+<div id="decision" class="notice">VIN analizi sonrası öneri üretilecek.</div>
+</section>
+
+<section class="card wide">
+<div class="title"><h3>Alan Karşılaştırması / Kaynaklar</h3></div>
+<div style="overflow:auto"><table class="table" id="compare"></table></div>
+</section>
+
+<section class="card wide">
+<div class="title"><h3>Ham API Verisi</h3><button class="btn secondary" id="copy">JSON Kopyala</button></div>
+<pre id="raw">Henüz veri yok.</pre>
+</section>
+</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+let catalog={}; let lastRaw=null;
+
+function clean(v){return v===null||v===undefined||v===""||v==="Not Applicable"||v==="0"&&false?"—":String(v)}
+function norm(v){return String(v||"").toUpperCase().replace(/[^A-Z0-9]/g,"")}
+function validVin(v){return /^[A-HJ-NPR-Z0-9]{17}$/.test(v)}
+function setStatus(t,c=""){ $("status").textContent=t; $("status").className="notice "+c }
+function fact(label,value,source=""){return `<div class="fact"><span>${label}</span><b>${clean(value)}</b>${source?`<small class="muted">${source}</small>`:""}</div>`}
+function first(...xs){return xs.find(x=>x!==undefined&&x!==null&&String(x).trim()!==""&&x!=="Not Applicable")}
+function catalogFind(make,model){
+  const b=Object.keys(catalog).find(k=>k.toLowerCase()===String(make||"").toLowerCase());
+  if(!b)return null;
+  const models=catalog[b]; const m=Object.keys(models||{}).find(k=>k.toLowerCase()===String(model||"").toLowerCase());
+  return m?{brand:b,model:m,...models[m]}:null;
+}
+function renderTax(){
+ const m=Number($("matrah").value||0), o=Number($("otv").value||0);
+ if(!m){$("taxOut").textContent="Matrah girildiğinde simülasyon burada görünür.";return}
+ const otv=m*o, ara=m+otv, kdv=ara*.20, total=ara+kdv;
+ $("taxOut").innerHTML=`Matrah: <b>${m.toLocaleString("tr-TR")} TL</b><br>ÖTV: <b>${otv.toLocaleString("tr-TR")} TL</b><br>KDV matrahı: <b>${ara.toLocaleString("tr-TR")} TL</b><br>KDV (%20 simülasyon): <b>${kdv.toLocaleString("tr-TR")} TL</b><br><strong>Toplam: ${total.toLocaleString("tr-TR")} TL</strong>`;
+}
+$("matrah").addEventListener("input",renderTax); $("otv").addEventListener("change",renderTax);
+
+async function loadCatalog(){
+ try{const r=await fetch("./vehicles.json",{cache:"no-store"}); if(r.ok) catalog=await r.json();}catch(e){console.warn("vehicles.json okunamadı",e)}
+}
+async function dbvin(vin){
+ const r=await fetch("https://db.vin/api/v1/vin/"+encodeURIComponent(vin),{headers:{Accept:"application/json"}});
+ if(!r.ok)throw new Error("DB.VIN HTTP "+r.status);
+ return await r.json();
+}
+async function nhtsa(vin){
+ const r=await fetch("https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/"+encodeURIComponent(vin)+"?format=json");
+ if(!r.ok)throw new Error("NHTSA HTTP "+r.status);
+ const j=await r.json(); return j.Results?.[0]||{};
+}
+function scoreData(d,cat){
+ let s=0,fields=["make","model","year","version","body","fuel","country","engine","hp","trans","drive"];
+ fields.forEach(k=>{if(d[k]&&d[k]!=="—")s+=7});
+ if(cat)s+=10; if(d.db)s+=8; if(d.nhtsa)s+=7;
+ return Math.min(100,s);
+}
+function decision(d,s){
+ if(s>=80)return "🟢 Güçlü veri: Araç kimliği ve teknik alanların önemli bölümü doğrulanmış. Satın alma öncesinde servis geçmişi, ekspertiz ve resmi kayıtları ayrıca kontrol et.";
+ if(s>=55)return "🟡 Orta güven: Araç tanımlanıyor ancak bazı alanlar eksik. Özellikle motor/versiyon ve geçmiş bilgilerini bağımsız doğrula.";
+ return "⚪ Düşük veri: VIN formatı geçerli olabilir fakat yeterli kamuya açık veri bulunamadı. Sonucu araç geçmişi olarak yorumlama.";
+}
+async function analyze(){
+ const vin=norm($("vin").value); $("vin").value=vin;
+ if(!validVin(vin)){setStatus("VIN 17 karakter olmalı ve I, O, Q içermemeli.","bad");return}
+ $("results").classList.remove("hidden"); setStatus("Canlı kaynaklar sorgulanıyor…");
+ $("vehicleName").textContent="Analiz ediliyor…"; $("raw").textContent="Yükleniyor…";
+ let db=null,nh=null,errors=[];
+ try{db=await dbvin(vin)}catch(e){errors.push("DB.VIN: "+e.message)}
+ try{nh=await nhtsa(vin)}catch(e){errors.push("NHTSA: "+e.message)}
+ const make=first(db?.brand,nh?.Make), model=first(db?.model,nh?.Model), year=first(db?.year,nh?.ModelYear);
+ const cat=catalogFind(make,model);
+ const d={
+  make,model,year,
+  version:first(db?.version,nh?.Trim,nh?.Series),
+  body:first(db?.bodyType,nh?.BodyClass),
+  fuel:first(db?.fuelType,nh?.FuelTypePrimary),
+  color:first(db?.color,nh?.Color),
+  country:first(db?.registrationCountry,nh?.PlantCountry),
+  mileage:first(db?.mileage),
+  vehicleType:first(nh?.VehicleType,db?.vehicleType),
+  engine:first(nh?.DisplacementCC,nh?.DisplacementL,cat?.engines?.[0]?.displacement_cc),
+  cylinders:first(nh?.EngineCylinders,cat?.engines?.[0]?.cylinders),
+  hp:first(nh?.EngineHP,cat?.engines?.[0]?.power_hp),
+  trans:first(nh?.TransmissionStyle,cat?.engines?.[0]?.transmission),
+  drive:first(nh?.DriveType,cat?.engines?.[0]?.drive),
+  doors:first(nh?.Doors,cat?.doors),
+  seats:first(nh?.Seats,cat?.seats),
+  plant:first(nh?.PlantCity),
+  plantCountry:first(nh?.PlantCountry),
+  gvwr:first(nh?.GVWR),
+  price:first(db?.price),
+  currency:first(db?.currency)
+ };
+ const s=scoreData({...d,db,nhtsa:nh},cat);
+ $("vehicleName").textContent=[d.make,d.model,d.year].filter(Boolean).join(" ")||"Araç bulunamadı";
+ $("confidence").textContent=s>=80?"Yüksek veri kapsamı":s>=55?"Orta veri kapsamı":"Düşük veri kapsamı";
+ $("sourceChips").innerHTML=(db?'<span class="chip">🟢 DB.VIN</span>':'')+(nh?'<span class="chip">🟢 NHTSA vPIC</span>':'')+(cat?'<span class="chip">🔵 vehicles.json</span>':'')+(!db&&!nh?'<span class="chip">⚪ Canlı veri yok</span>':'');
+ $("identity").innerHTML=[
+  fact("Marka",d.make,"Canlı kaynak"),
+  fact("Model",d.model,"Canlı kaynak"),
+  fact("Model yılı",d.year,"Canlı kaynak"),
+  fact("Versiyon / Seri",d.version,"Kaynak: API"),
+  fact("Kasa",d.body,"Kaynak: API"),
+  fact("Yakıt",d.fuel,"Kaynak: API"),
+  fact("Renk",d.color,"Kaynak: API"),
+  fact("Kayıt / üretim ülkesi",d.country,"Kaynak: API"),
+  fact("Kilometre",d.mileage,"Yalnızca kaynak bildirirse"),
+  fact("Fiyat",d.price?(d.price+" "+(d.currency||"")):"—","Yalnızca API bildirirse")
+ ].join("");
+ $("tech").innerHTML=[
+  fact("Motor hacmi",d.engine?d.engine+" cc":"—",cat&&(!nh?.DisplacementCC&&!nh?.DisplacementL)?"JSON katalog":"API"),
+  fact("Silindir",d.cylinders,cat&&(!nh?.EngineCylinders)?"JSON katalog":"API"),
+  fact("Güç",d.hp?d.hp+" hp":"—",cat&&(!nh?.EngineHP)?"JSON katalog":"API"),
+  fact("Şanzıman",d.trans,cat&&(!nh?.TransmissionStyle)?"JSON katalog":"API"),
+  fact("Çekiş",d.drive,cat&&(!nh?.DriveType)?"JSON katalog":"API"),
+  fact("Kapı",d.doors,cat&&(!nh?.Doors)?"JSON katalog":"API"),
+  fact("Koltuk",d.seats,cat&&(!nh?.Seats)?"JSON katalog":"API"),
+  fact("Üretim tesisi",d.plant,d.plant?"NHTSA":"—"),
+  fact("Tesis ülkesi",d.plantCountry,d.plantCountry?"NHTSA":"—"),
+  fact("GVWR",d.gvwr,d.gvwr?"NHTSA":"—")
+ ].join("");
+ if(cat){
+  $("catalogBox").classList.remove("hidden");
+  $("catalogBox").textContent=`🔵 JSON katalog eşleşmesi: ${cat.brand} ${cat.model}. Buradaki motor/teknik bilgiler katalog seviyesindedir; VIN'e özel kesinlik iddiası taşımaz.`;
+ }else $("catalogBox").classList.add("hidden");
+ $("score").textContent=s; $("scorebar").style.width=s+"%";
+ $("scoreText").textContent=decision(d,s);
+ $("decision").textContent=decision(d,s);
+ const rows=[
+ ["Alan","Değer","Kaynak"],
+ ["Marka",d.make,db?.brand?"DB.VIN":nh?.Make?"NHTSA":"—"],
+ ["Model",d.model,db?.model?"DB.VIN":nh?.Model?"NHTSA":"—"],
+ ["Yıl",d.year,db?.year?"DB.VIN":nh?.ModelYear?"NHTSA":"—"],
+ ["Motor",d.engine,nh?.DisplacementCC||nh?.DisplacementL?"NHTSA":cat?"JSON katalog":"—"],
+ ["Güç",d.hp,nh?.EngineHP?"NHTSA":cat?"JSON katalog":"—"],
+ ["Şanzıman",d.trans,nh?.TransmissionStyle?"NHTSA":cat?"JSON katalog":"—"],
+ ["Yakıt",d.fuel,db?.fuelType?"DB.VIN":nh?.FuelTypePrimary?"NHTSA":"—"]
+ ];
+ $("compare").innerHTML="<tr>"+rows[0].map(x=>"<th>"+x+"</th>").join("")+"</tr>"+rows.slice(1).map(r=>"<tr>"+r.map(x=>"<td>"+clean(x)+"</td>").join("")+"</tr>").join("");
+ lastRaw={vin,dbvin:db,nhtsa:nh,catalog:cat,normalized:d,errors};
+ $("raw").textContent=JSON.stringify(lastRaw,null,2);
+ if(!db&&!nh)setStatus("VIN formatı geçerli, fakat canlı kaynaklardan veri alınamadı. Bu, VIN'in sahte olduğu anlamına gelmez.","warn");
+ else if(errors.length)setStatus("Analiz tamamlandı; bazı kaynaklara erişilemedi. Mevcut sonuçlar gösteriliyor.","warn");
+ else setStatus("Analiz tamamlandı. Kaynaklar ve katalog katkıları ayrı gösteriliyor.","ok");
+}
+$("go").addEventListener("click",analyze);
+$("vin").addEventListener("keydown",e=>{if(e.key==="Enter")analyze()});
+$("sample").addEventListener("click",()=>{$("vin").value="WVWZZZ1JZXW000001";analyze()});
+$("clear").addEventListener("click",()=>{$("vin").value="";$("results").classList.add("hidden");setStatus("Hazır. VIN girip analiz et.")});
+$("copy").addEventListener("click",async()=>{if(lastRaw){await navigator.clipboard.writeText(JSON.stringify(lastRaw,null,2));$("copy").textContent="Kopyalandı ✓";setTimeout(()=>$("copy").textContent="JSON Kopyala",1300)}});
+loadCatalog();
+</script>
+</body>
+</html>
