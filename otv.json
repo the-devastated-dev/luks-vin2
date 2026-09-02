@@ -1,0 +1,22 @@
+{
+  "version": "2026-09-02",
+  "note": "Oranlar hukuki/vergisel karar yerine geçmez. 87.03 ve 87.04 ayrımı GTIP ve teknik tanıma göre yapılmalıdır.",
+  "rules": [
+    {
+      "class": "87.04",
+      "label": "Eşya taşımaya mahsus kayıt/tescile tabi ticari araç",
+      "rates": {
+        "<=3000cc": 0.1,
+        "3001-4000cc": 0.52,
+        ">4000cc": 0.75,
+        "electric": 0.1
+      },
+      "requires": "Azami yüklü kütle, koltuk/pencere, kapalı kasa ve GTİP alt kırılımı kontrolü"
+    },
+    {
+      "class": "87.03",
+      "label": "Binek / insan taşımaya mahsus",
+      "rates": "Motor hacmi, motor gücü, elektrik/hybrid yapısı ve ÖTV matrahına göre alt tarife kontrolü gerekir"
+    }
+  ]
+}
