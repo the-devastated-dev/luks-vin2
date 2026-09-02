@@ -1,1179 +1,617 @@
 {
   "Peugeot": {
     "208": {
-      "engines": [
-        {
-          "name": "1.2 PureTech",
-          "power_hp": 100,
-          "fuel": "Benzin",
-          "transmission": "Manuel / EAT8"
-        },
-        {
-          "name": "e-208",
-          "power_hp": 136,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
-    },
-    "308": {
-      "engines": [
-        {
-          "name": "1.2 PureTech",
-          "power_hp": 130,
-          "fuel": "Benzin",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "EAT8"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "2008": {
-      "engines": [
-        {
-          "name": "1.2 PureTech",
-          "power_hp": 130,
-          "fuel": "Benzin",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "e-2008",
-          "power_hp": 136,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "308": {
+      "category": "catalog-match"
     },
     "3008": {
-      "engines": [
-        {
-          "name": "1.2 PureTech",
-          "power_hp": 130,
-          "fuel": "Benzin",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "EAT8"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "5008": {
-      "engines": [
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "EAT8"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 7
+      "category": "catalog-match"
     },
     "Partner": {
-      "engines": [
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 100,
-          "fuel": "Dizel",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "EAT8"
-        }
-      ],
-      "body": "Panelvan",
-      "doors": 5,
-      "seats": 2
+      "category": "catalog-match"
+    },
+    "Rifter": {
+      "category": "catalog-match"
+    },
+    "Expert": {
+      "category": "catalog-match"
+    },
+    "Boxer": {
+      "category": "catalog-match"
     }
   },
   "Citroën": {
     "C3": {
-      "engines": [
-        {
-          "name": "1.2 PureTech",
-          "power_hp": 100,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "C4": {
-      "engines": [
-        {
-          "name": "1.2 PureTech",
-          "power_hp": 130,
-          "fuel": "Benzin",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "e-C4",
-          "power_hp": 136,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "C5 Aircross": {
-      "engines": [
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "1.6 Plug-in Hybrid",
-          "power_hp": 180,
-          "fuel": "Plug-in Hybrid",
-          "transmission": "EAT8"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Berlingo": {
+      "category": "catalog-match"
+    },
+    "Jumpy": {
+      "category": "catalog-match"
+    },
+    "Jumper": {
+      "category": "catalog-match"
     }
   },
   "Renault": {
     "Clio": {
-      "engines": [
-        {
-          "name": "1.0 TCe",
-          "power_hp": 90,
-          "fuel": "Benzin",
-          "transmission": "Manuel / CVT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
-    },
-    "Megane": {
-      "engines": [
-        {
-          "name": "1.3 TCe",
-          "power_hp": 140,
-          "fuel": "Benzin",
-          "transmission": "EDC"
-        },
-        {
-          "name": "E-Tech",
-          "power_hp": 220,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Captur": {
-      "engines": [
-        {
-          "name": "1.0 TCe",
-          "power_hp": 90,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "1.6 E-Tech",
-          "power_hp": 145,
-          "fuel": "Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Megane": {
+      "category": "catalog-match"
     },
     "Austral": {
-      "engines": [
-        {
-          "name": "1.2 E-Tech",
-          "power_hp": 200,
-          "fuel": "Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Arkana": {
+      "category": "catalog-match"
+    },
+    "Kangoo": {
+      "category": "catalog-match"
+    },
+    "Trafic": {
+      "category": "catalog-match"
+    },
+    "Master": {
+      "category": "catalog-match"
     }
   },
   "Dacia": {
     "Sandero": {
-      "engines": [
-        {
-          "name": "1.0 TCe",
-          "power_hp": 90,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "1.0 ECO-G",
-          "power_hp": 100,
-          "fuel": "LPG/Benzin",
-          "transmission": "Manuel"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Duster": {
-      "engines": [
-        {
-          "name": "1.0 TCe",
-          "power_hp": 90,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "1.3 TCe",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "EDC"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Jogger": {
-      "engines": [
-        {
-          "name": "1.0 TCe",
-          "power_hp": 110,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "Hybrid 140",
-          "power_hp": 140,
-          "fuel": "Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "MPV",
-      "doors": 5,
-      "seats": 7
+      "category": "catalog-match"
+    },
+    "Spring": {
+      "category": "catalog-match"
     }
   },
   "Volkswagen": {
+    "Polo": {
+      "category": "catalog-match"
+    },
     "Golf": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG / Manuel"
-        },
-        {
-          "name": "2.0 TDI",
-          "power_hp": 150,
-          "fuel": "Dizel",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Passat": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        },
-        {
-          "name": "2.0 TDI",
-          "power_hp": 150,
-          "fuel": "Dizel",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "Station Wagon",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "T-Roc": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Tiguan": {
-      "engines": [
-        {
-          "name": "1.5 eTSI",
-          "power_hp": 150,
-          "fuel": "Mild Hybrid",
-          "transmission": "DSG"
-        },
-        {
-          "name": "2.0 TDI",
-          "power_hp": 193,
-          "fuel": "Dizel",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Touran": {
+      "category": "catalog-match"
+    },
+    "Caddy": {
+      "category": "catalog-match"
+    },
+    "Transporter": {
+      "category": "catalog-match"
+    },
+    "Crafter": {
+      "category": "catalog-match"
     }
   },
   "Audi": {
+    "A1": {
+      "category": "catalog-match"
+    },
     "A3": {
-      "engines": [
-        {
-          "name": "35 TFSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "S tronic"
-        },
-        {
-          "name": "35 TDI",
-          "power_hp": 150,
-          "fuel": "Dizel",
-          "transmission": "S tronic"
-        }
-      ],
-      "body": "Hatchback/Sedan",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "A4": {
-      "engines": [
-        {
-          "name": "35 TFSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "S tronic"
-        },
-        {
-          "name": "40 TDI",
-          "power_hp": 204,
-          "fuel": "Dizel",
-          "transmission": "S tronic"
-        }
-      ],
-      "body": "Sedan/Avant",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "A5": {
+      "category": "catalog-match"
+    },
+    "A6": {
+      "category": "catalog-match"
+    },
+    "Q2": {
+      "category": "catalog-match"
     },
     "Q3": {
-      "engines": [
-        {
-          "name": "35 TFSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "S tronic"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Q4": {
+      "category": "catalog-match"
+    },
+    "Q5": {
+      "category": "catalog-match"
+    },
+    "Q7": {
+      "category": "catalog-match"
+    },
+    "Q8": {
+      "category": "catalog-match"
     }
   },
   "BMW": {
     "1 Serisi": {
-      "engines": [
-        {
-          "name": "120",
-          "power_hp": 170,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "2 Serisi": {
+      "category": "catalog-match"
     },
     "3 Serisi": {
-      "engines": [
-        {
-          "name": "320i",
-          "power_hp": 170,
-          "fuel": "Benzin",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "320d",
-          "power_hp": 190,
-          "fuel": "Dizel",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Sedan",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "4 Serisi": {
+      "category": "catalog-match"
     },
     "5 Serisi": {
-      "engines": [
-        {
-          "name": "520i",
-          "power_hp": 190,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "520d",
-          "power_hp": 197,
-          "fuel": "Dizel/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Sedan",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "7 Serisi": {
+      "category": "catalog-match"
     },
     "X1": {
-      "engines": [
-        {
-          "name": "sDrive18i",
-          "power_hp": 136,
-          "fuel": "Benzin",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "xDrive20d",
-          "power_hp": 163,
-          "fuel": "Dizel/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "X3": {
+      "category": "catalog-match"
+    },
+    "X5": {
+      "category": "catalog-match"
     }
   },
   "Mercedes-Benz": {
     "A-Class": {
-      "engines": [
-        {
-          "name": "A 180",
-          "power_hp": 136,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "C-Class": {
-      "engines": [
-        {
-          "name": "C 180",
-          "power_hp": 170,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "C 200 d",
-          "power_hp": 163,
-          "fuel": "Dizel/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Sedan",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
     },
     "E-Class": {
-      "engines": [
-        {
-          "name": "E 200",
-          "power_hp": 204,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "E 220 d",
-          "power_hp": 197,
-          "fuel": "Dizel/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Sedan",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "S-Class": {
+      "category": "catalog-match"
+    },
+    "GLA": {
+      "category": "catalog-match"
     },
     "GLC": {
-      "engines": [
-        {
-          "name": "GLC 200",
-          "power_hp": 204,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "GLE": {
+      "category": "catalog-match"
+    },
+    "Vito": {
+      "category": "catalog-match"
+    },
+    "Sprinter": {
+      "category": "catalog-match"
+    }
+  },
+  "Ford": {
+    "Fiesta": {
+      "category": "catalog-match"
+    },
+    "Focus": {
+      "category": "catalog-match"
+    },
+    "Puma": {
+      "category": "catalog-match"
+    },
+    "Kuga": {
+      "category": "catalog-match"
+    },
+    "Transit Courier": {
+      "category": "catalog-match"
+    },
+    "Transit Connect": {
+      "category": "catalog-match"
+    },
+    "Transit Custom": {
+      "category": "catalog-match"
+    },
+    "Ranger": {
+      "category": "catalog-match"
     }
   },
   "Opel": {
     "Corsa": {
-      "engines": [
-        {
-          "name": "1.2 Turbo",
-          "power_hp": 100,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "Corsa Electric",
-          "power_hp": 136,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Astra": {
-      "engines": [
-        {
-          "name": "1.2 Turbo",
-          "power_hp": 130,
-          "fuel": "Benzin",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "1.5 Diesel",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "EAT8"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Mokka": {
-      "engines": [
-        {
-          "name": "1.2 Turbo",
-          "power_hp": 130,
-          "fuel": "Benzin",
-          "transmission": "EAT8"
-        },
-        {
-          "name": "Mokka Electric",
-          "power_hp": 136,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
-    }
-  },
-  "Ford": {
-    "Focus": {
-      "engines": [
-        {
-          "name": "1.0 EcoBoost",
-          "power_hp": 125,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "1.5 EcoBlue",
-          "power_hp": 120,
-          "fuel": "Dizel",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
-    "Puma": {
-      "engines": [
-        {
-          "name": "1.0 EcoBoost Hybrid",
-          "power_hp": 125,
-          "fuel": "Mild Hybrid",
-          "transmission": "Manuel/DCT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+    "Grandland": {
+      "category": "catalog-match"
     },
-    "Kuga": {
-      "engines": [
-        {
-          "name": "1.5 EcoBoost",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "2.5 FHEV",
-          "power_hp": 180,
-          "fuel": "Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+    "Combo": {
+      "category": "catalog-match"
+    },
+    "Vivaro": {
+      "category": "catalog-match"
+    },
+    "Movano": {
+      "category": "catalog-match"
     }
   },
   "Fiat": {
-    "Egea": {
-      "engines": [
-        {
-          "name": "1.4 Fire",
-          "power_hp": 95,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        },
-        {
-          "name": "1.6 Multijet",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "DCT/Manuel"
-        }
-      ],
-      "body": "Sedan/Hatchback",
-      "doors": 4,
-      "seats": 5
-    },
     "500": {
-      "engines": [
-        {
-          "name": "1.0 Hybrid",
-          "power_hp": 70,
-          "fuel": "Mild Hybrid",
-          "transmission": "Manuel"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 3,
-      "seats": 4
+      "category": "catalog-match"
+    },
+    "Panda": {
+      "category": "catalog-match"
+    },
+    "Tipo": {
+      "category": "catalog-match"
+    },
+    "Egea": {
+      "category": "catalog-match"
     },
     "Doblo": {
-      "engines": [
-        {
-          "name": "1.5 BlueHDi",
-          "power_hp": 130,
-          "fuel": "Dizel",
-          "transmission": "Manuel/Automatic"
-        }
-      ],
-      "body": "Panelvan",
-      "doors": 5,
-      "seats": 2
+      "category": "catalog-match"
+    },
+    "Scudo": {
+      "category": "catalog-match"
+    },
+    "Ducato": {
+      "category": "catalog-match"
     }
   },
   "Toyota": {
-    "Corolla": {
-      "engines": [
-        {
-          "name": "1.8 Hybrid",
-          "power_hp": 140,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        },
-        {
-          "name": "1.5",
-          "power_hp": 125,
-          "fuel": "Benzin",
-          "transmission": "Manuel/CVT"
-        }
-      ],
-      "body": "Sedan/Hatchback",
-      "doors": 4,
-      "seats": 5
-    },
     "Yaris": {
-      "engines": [
-        {
-          "name": "1.5 Hybrid",
-          "power_hp": 116,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Corolla": {
+      "category": "catalog-match"
     },
     "C-HR": {
-      "engines": [
-        {
-          "name": "1.8 Hybrid",
-          "power_hp": 140,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        },
-        {
-          "name": "2.0 Hybrid",
-          "power_hp": 197,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "RAV4": {
-      "engines": [
-        {
-          "name": "2.5 Hybrid",
-          "power_hp": 218,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Proace City": {
+      "category": "catalog-match"
+    },
+    "Proace": {
+      "category": "catalog-match"
+    },
+    "Hilux": {
+      "category": "catalog-match"
     }
   },
   "Hyundai": {
+    "i10": {
+      "category": "catalog-match"
+    },
     "i20": {
-      "engines": [
-        {
-          "name": "1.0 T-GDI",
-          "power_hp": 100,
-          "fuel": "Benzin",
-          "transmission": "Manuel/DCT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "i30": {
-      "engines": [
-        {
-          "name": "1.5 T-GDI",
-          "power_hp": 160,
-          "fuel": "Benzin",
-          "transmission": "DCT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Bayon": {
+      "category": "catalog-match"
+    },
+    "Kona": {
+      "category": "catalog-match"
     },
     "Tucson": {
-      "engines": [
-        {
-          "name": "1.6 T-GDI",
-          "power_hp": 160,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "DCT"
-        },
-        {
-          "name": "1.6 CRDi",
-          "power_hp": 136,
-          "fuel": "Dizel",
-          "transmission": "DCT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Santa Fe": {
+      "category": "catalog-match"
+    },
+    "Staria": {
+      "category": "catalog-match"
     }
   },
   "Kia": {
     "Picanto": {
-      "engines": [
-        {
-          "name": "1.0",
-          "power_hp": 67,
-          "fuel": "Benzin",
-          "transmission": "Manuel/AMT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 4
+      "category": "catalog-match"
+    },
+    "Rio": {
+      "category": "catalog-match"
     },
     "Ceed": {
-      "engines": [
-        {
-          "name": "1.5 T-GDI",
-          "power_hp": 160,
-          "fuel": "Benzin",
-          "transmission": "DCT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Niro": {
+      "category": "catalog-match"
     },
     "Sportage": {
-      "engines": [
-        {
-          "name": "1.6 T-GDI",
-          "power_hp": 150,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "DCT"
-        },
-        {
-          "name": "1.6 CRDi",
-          "power_hp": 136,
-          "fuel": "Dizel",
-          "transmission": "DCT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Sorento": {
+      "category": "catalog-match"
     }
   },
   "Volvo": {
+    "EX30": {
+      "category": "catalog-match"
+    },
     "XC40": {
-      "engines": [
-        {
-          "name": "B3",
-          "power_hp": 163,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "Recharge",
-          "power_hp": 231,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "XC60": {
-      "engines": [
-        {
-          "name": "B5",
-          "power_hp": 250,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "T6 Recharge",
-          "power_hp": 350,
-          "fuel": "Plug-in Hybrid",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "XC90": {
+      "category": "catalog-match"
+    },
+    "S60": {
+      "category": "catalog-match"
+    },
+    "V60": {
+      "category": "catalog-match"
     }
   },
   "Skoda": {
     "Fabia": {
-      "engines": [
-        {
-          "name": "1.0 TSI",
-          "power_hp": 95,
-          "fuel": "Benzin",
-          "transmission": "Manuel"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Scala": {
+      "category": "catalog-match"
     },
     "Octavia": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        },
-        {
-          "name": "2.0 TDI",
-          "power_hp": 150,
-          "fuel": "Dizel",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "Sedan/Liftback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Superb": {
+      "category": "catalog-match"
+    },
+    "Kamiq": {
+      "category": "catalog-match"
     },
     "Karoq": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Kodiaq": {
+      "category": "catalog-match"
     }
   },
   "SEAT": {
     "Ibiza": {
-      "engines": [
-        {
-          "name": "1.0 TSI",
-          "power_hp": 110,
-          "fuel": "Benzin",
-          "transmission": "DSG/Manuel"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Leon": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Arona": {
+      "category": "catalog-match"
     },
     "Ateca": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Tarraco": {
+      "category": "catalog-match"
     }
   },
   "CUPRA": {
+    "Born": {
+      "category": "catalog-match"
+    },
     "Formentor": {
-      "engines": [
-        {
-          "name": "1.5 TSI",
-          "power_hp": 150,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        },
-        {
-          "name": "2.0 TSI",
-          "power_hp": 310,
-          "fuel": "Benzin",
-          "transmission": "DSG"
-        }
-      ],
-      "body": "SUV/Crossover",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Leon": {
+      "category": "catalog-match"
+    },
+    "Tavascan": {
+      "category": "catalog-match"
     }
   },
   "Nissan": {
     "Micra": {
-      "engines": [
-        {
-          "name": "1.0 IG-T",
-          "power_hp": 92,
-          "fuel": "Benzin",
-          "transmission": "Manuel/CVT"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Juke": {
+      "category": "catalog-match"
     },
     "Qashqai": {
-      "engines": [
-        {
-          "name": "1.3 DIG-T",
-          "power_hp": 158,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Xtronic/DCT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "X-Trail": {
+      "category": "catalog-match"
+    },
+    "Townstar": {
+      "category": "catalog-match"
+    },
+    "Primastar": {
+      "category": "catalog-match"
+    },
+    "Interstar": {
+      "category": "catalog-match"
     }
   },
   "Honda": {
+    "Jazz": {
+      "category": "catalog-match"
+    },
     "Civic": {
-      "engines": [
-        {
-          "name": "1.5 VTEC Turbo",
-          "power_hp": 182,
-          "fuel": "Benzin",
-          "transmission": "CVT"
-        },
-        {
-          "name": "e:HEV",
-          "power_hp": 184,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        }
-      ],
-      "body": "Sedan/Hatchback",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
     },
     "HR-V": {
-      "engines": [
-        {
-          "name": "1.5 e:HEV",
-          "power_hp": 131,
-          "fuel": "Hybrid",
-          "transmission": "e-CVT"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "CR-V": {
+      "category": "catalog-match"
     }
   },
   "Mazda": {
+    "Mazda2": {
+      "category": "catalog-match"
+    },
     "Mazda3": {
-      "engines": [
-        {
-          "name": "2.0 Skyactiv-G",
-          "power_hp": 122,
-          "fuel": "Benzin/Mild Hybrid",
-          "transmission": "Manuel/Automatic"
-        }
-      ],
-      "body": "Hatchback/Sedan",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "CX-30": {
+      "category": "catalog-match"
     },
     "CX-5": {
-      "engines": [
-        {
-          "name": "2.0 Skyactiv-G",
-          "power_hp": 194,
-          "fuel": "Benzin",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "CX-60": {
+      "category": "catalog-match"
     }
   },
   "Suzuki": {
     "Swift": {
-      "engines": [
-        {
-          "name": "1.2 Hybrid",
-          "power_hp": 82,
-          "fuel": "Hybrid",
-          "transmission": "CVT/Manuel"
-        }
-      ],
-      "body": "Hatchback",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Vitara": {
-      "engines": [
-        {
-          "name": "1.4 Boosterjet Hybrid",
-          "power_hp": 129,
-          "fuel": "Mild Hybrid",
-          "transmission": "Manuel/Automatic"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "S-Cross": {
+      "category": "catalog-match"
+    },
+    "Jimny": {
+      "category": "catalog-match"
     }
   },
   "Tesla": {
     "Model 3": {
-      "engines": [
-        {
-          "name": "RWD",
-          "power_hp": 283,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "Long Range AWD",
-          "power_hp": 498,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "Sedan",
-      "doors": 4,
-      "seats": 5
+      "category": "catalog-match"
     },
     "Model Y": {
-      "engines": [
-        {
-          "name": "RWD",
-          "power_hp": 299,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        },
-        {
-          "name": "Long Range AWD",
-          "power_hp": 514,
-          "fuel": "Elektrik",
-          "transmission": "Otomatik"
-        }
-      ],
-      "body": "SUV",
-      "doors": 5,
-      "seats": 5
+      "category": "catalog-match"
+    },
+    "Model S": {
+      "category": "catalog-match"
+    },
+    "Model X": {
+      "category": "catalog-match"
+    }
+  },
+  "BYD": {
+    "Dolphin": {
+      "category": "catalog-match"
+    },
+    "Atto 3": {
+      "category": "catalog-match"
+    },
+    "Seal": {
+      "category": "catalog-match"
+    },
+    "Seal U": {
+      "category": "catalog-match"
+    }
+  },
+  "MG": {
+    "MG3": {
+      "category": "catalog-match"
+    },
+    "ZS": {
+      "category": "catalog-match"
+    },
+    "HS": {
+      "category": "catalog-match"
+    },
+    "4": {
+      "category": "catalog-match"
+    },
+    "5": {
+      "category": "catalog-match"
+    }
+  },
+  "Subaru": {
+    "Impreza": {
+      "category": "catalog-match"
+    },
+    "Forester": {
+      "category": "catalog-match"
+    },
+    "Outback": {
+      "category": "catalog-match"
+    }
+  },
+  "Mitsubishi": {
+    "ASX": {
+      "category": "catalog-match"
+    },
+    "Eclipse Cross": {
+      "category": "catalog-match"
+    },
+    "Outlander": {
+      "category": "catalog-match"
+    }
+  },
+  "Jeep": {
+    "Avenger": {
+      "category": "catalog-match"
+    },
+    "Renegade": {
+      "category": "catalog-match"
+    },
+    "Compass": {
+      "category": "catalog-match"
+    },
+    "Wrangler": {
+      "category": "catalog-match"
+    },
+    "Grand Cherokee": {
+      "category": "catalog-match"
+    }
+  },
+  "Land Rover": {
+    "Defender": {
+      "category": "catalog-match"
+    },
+    "Discovery": {
+      "category": "catalog-match"
+    },
+    "Range Rover": {
+      "category": "catalog-match"
+    },
+    "Range Rover Sport": {
+      "category": "catalog-match"
+    },
+    "Evoque": {
+      "category": "catalog-match"
+    }
+  },
+  "Porsche": {
+    "911": {
+      "category": "catalog-match"
+    },
+    "718": {
+      "category": "catalog-match"
+    },
+    "Taycan": {
+      "category": "catalog-match"
+    },
+    "Macan": {
+      "category": "catalog-match"
+    },
+    "Cayenne": {
+      "category": "catalog-match"
+    },
+    "Panamera": {
+      "category": "catalog-match"
     }
   }
 }
